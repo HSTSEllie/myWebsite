@@ -5,6 +5,7 @@ import random
 from datetime import datetime
 import json
 app=Flask(__name__)
+db= 'personalDB.db'
 try:
     with open('views.json','r') as f:
         views=json.loads(f.read())
@@ -24,7 +25,17 @@ def gohome():
 @app.route('/home')
 def home():
     increment()
-    return render_template('template2.html')
+    return render_template('home.html')
+@app.route('/plushies')
+def plushies():
+    if request.method =='GET':
+        conn = sqlite3.connect(db)
+        cur = conn.cursor()
+        cur.execute('select * from Plushies order by dateObtained desc')
+        plushie = cur.fetchall()
+        print(plushie[0])
+        return render_template('plushies.html',plosh=plushie)
+
 
 
 if __name__ == '__main__':

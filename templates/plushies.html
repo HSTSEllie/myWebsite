@@ -1,0 +1,27 @@
+{%extends 'template2.html'%}
+{%block homepage %}
+<div class="container bg-light">
+	<div class="container-md">
+		{%for cuddle in plosh %}
+		<div class="container">
+			<img src={{cuddle[4]}} class="softimage">
+			<div class="mt-3"><h2>_</h2></div>
+			<div class="mt-3">
+				<p class="title"> {{cuddle[0].title()}}</p>
+				<p>{{cuddle[2]}}</p>
+				<p> obtained on {{cuddle[1]}}</p>
+				<p>{{cuddle[3]}}</p>
+			</div>
+
+
+		</div>
+		<br>
+		<br>
+{%endfor%}
+
+</div>
+
+	</div>
+
+{%endblock%}
+

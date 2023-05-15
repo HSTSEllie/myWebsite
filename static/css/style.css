@@ -5,3 +5,46 @@ body {
    background-repeat: no-repeat;
   background-attachment: fixed;
 }
+container-md {
+
+	margin-left: auto;
+	margin-right: auto;
+  background: #ffffff;
+	width: 20em;
+
+}
+h1 {
+  color: #53105e;
+}
+.softimage { 
+  width: 30em;
+  height: 30em;
+  object-position: center;
+  border-radius: 10%;
+  object-fit: fill;
+}
+.container{
+  background-color: #ffffff;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+p {
+  color: #53105e;
+  font-size: large;
+}
+.title{
+  font-weight:1000;
+}
+h2 {
+  color: transparent;
+}
+.socialbutton {
+  width: 3em;
+  height: 3em;
+}
+button{
+  border: none;
+  cursor: pointer;
+  appearance: none;
+}
